@@ -2,25 +2,26 @@ package com.example.pizzaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-
-    private static final int SPLASH_DELAY = 2000; // 2 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Delay then open LoginActivity
-        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-            startActivity(intent);
-            finish(); // close Splash so user can’t go back
-        }, SPLASH_DELAY);
+        Button btnLogin = findViewById(R.id.btnLogin);
+        Button btnSignUp = findViewById(R.id.btnSignUp);
+
+        btnLogin.setOnClickListener(v ->
+                startActivity(new Intent(SplashActivity.this, LoginActivity.class))
+        );
+
+        btnSignUp.setOnClickListener(v ->
+                startActivity(new Intent(SplashActivity.this, SignUpActivity.class))
+        );
     }
 }

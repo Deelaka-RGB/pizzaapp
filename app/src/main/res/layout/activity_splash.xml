@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     android:id="@+id/main"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Full-screen image -->
+    <!-- Full-screen hero image -->
     <ImageView
         android:id="@+id/bgImage"
         android:layout_width="0dp"
@@ -18,45 +18,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/splash_picc" />
 
-    <!-- (Optional) bottom gradient for better text/button contrast -->
+    <!-- Soft gradient overlay for contrast -->
     <View
-        android:id="@+id/bottomScrim"
+        android:id="@+id/overlay"
         android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:background="@drawable/bottom_scrim"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_height="0dp"
 
-    <!-- Buttons container over the image -->
+        app:layout_constraintTop_toTopOf="@id/bgImage"
+        app:layout_constraintBottom_toBottomOf="@id/bgImage"
+        app:layout_constraintStart_toStartOf="@id/bgImage"
+        app:layout_constraintEnd_toEndOf="@id/bgImage" />
+
+    <!-- Brand/logo (optional image) -->
+
+
+    <!-- App name -->
+
+    <!-- Buttons container -->
     <LinearLayout
         android:id="@+id/buttonBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Sign Up"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btn_red_round"
-            android:layout_marginBottom="12dp"/>
-
-        <Button
+        <!-- Login -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="52dp"
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:background="@drawable/btn_red_round"/>
+            app:cornerRadius="26dp"
+            app:backgroundTint="#D32F2F"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Sign Up (outline style for visual hierarchy) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            app:cornerRadius="26dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/white"
+            app:backgroundTint="#00FFFFFF"
+            android:textColor="@android:color/white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
