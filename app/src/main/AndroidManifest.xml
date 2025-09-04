@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PizzaApp">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".item_offer_card"
             android:exported="false" />
-        <!-- Splash is launcher -->
+        <activity
+            android:name=".item_pizza_grid"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" /> <!-- Splash is launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -28,8 +33,10 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
+
+
     </application>
 
 </manifest>
