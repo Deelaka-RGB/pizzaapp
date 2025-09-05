@@ -47,6 +47,7 @@ dependencies {
 
     // (Optional) you already had Realtime DB, can keep/remove:
     implementation(libs.firebase.database)
+    implementation(libs.fragment)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

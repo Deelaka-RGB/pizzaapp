@@ -15,9 +15,6 @@
             android:name=".item_offer_card"
             android:exported="false" />
         <activity
-            android:name=".item_pizza_grid"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
             android:exported="false" /> <!-- Splash is launcher -->
         <activity
