@@ -172,6 +172,12 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionSearch" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvPopularPizzas"
                 android:layout_width="match_parent"
@@ -207,11 +213,6 @@
             app:startIconDrawable="@android:drawable/ic_menu_search"
             app:boxBackgroundMode="filled">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSearch"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionSearch" />
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
 
