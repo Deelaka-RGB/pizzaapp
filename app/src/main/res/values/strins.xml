@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">Pizza App</string>
+
+    <!-- Hints -->
+    <string name="hint_search">Search</string>
+
+    <!-- Labels -->
+    <string name="popular_food">Popular Food</string>
+    <string name="nearest">Nearest</string>
+    <string name="see_all">See All</string>
+    <string name="choose">Choose</string>
+    <string name="your_favorite_food">Your Favorite Food</string>
+
+    <!-- Content descriptions for accessibility -->
+    <string name="cd_nav_home">Home</string>
+    <string name="cd_nav_favorites">Favorites</string>
+    <string name="cd_nav_cart">Cart</string>
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_favorite_toggle">Toggle favorite</string>
+    <string name="cd_filter">Filter</string>
+
+        <string name="login">Login</string>
+        <string name="sign_up">Sign Up</string>
+
+
+    <string name="cd_food_image">Food image</string>
+
+    <string name="cd_add_to_cart">Add to cart</string>
+
+
+        <!-- Auth -->
+
+
+</resources>

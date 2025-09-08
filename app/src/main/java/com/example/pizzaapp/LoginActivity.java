@@ -1,4 +1,7 @@
 package com.example.pizzaapp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -108,9 +111,11 @@ public class LoginActivity extends AppCompatActivity {
         return et.getText() == null ? "" : et.getText().toString().trim();
     }
     private void goHome() {
-        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+        Intent i = new Intent(LoginActivity.this,DashboardActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
         finish(); // prevents back to Login
     }
+
+
 }

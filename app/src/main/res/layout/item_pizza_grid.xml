@@ -1,295 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?> <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="3dp">
-
-<GridLayout
-    android:id="@+id/gridPizzas"
-    android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:columnCount="2"
-    android:alignmentMode="alignMargins"
-    android:useDefaultMargins="true"
-    android:layout_marginTop="16dp"
-    android:padding="8dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-    <!-- Pizza 1 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Pizza Name"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:textColor="@android:color/black" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pizza_1"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Margherita"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$9.99"
-                        android:textColor="#D32F2F"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:backgroundTint="@color/red"
-                    android:text="+"
-                    app:cornerRadius="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Pizza 2 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Rs. 350"
+            android:textColor="@android:color/holo_red_dark" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pizza_2"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pepperoni"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$11.49"
-                        android:textColor="#D32F2F"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:backgroundTint="@color/red"
-                    android:text="+"
-                    app:cornerRadius="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Pizza 3 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pizza_3"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Veggie Delight"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$10.99"
-                        android:textColor="#D32F2F"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:backgroundTint="@color/red"
-                    android:text="+"
-                    app:cornerRadius="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Pizza 4 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pizza_4"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BBQ Chicken"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$12.49"
-                        android:textColor="#D32F2F"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:backgroundTint="@color/red"
-                    android:text="+"
-                    app:cornerRadius="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <!-- Pizza 5 -->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pizza_5"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cheese Burst"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$13.99"
-                        android:textColor="#D32F2F"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:backgroundTint="@color/red"
-                    android:text="+"
-                    app:cornerRadius="20dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-</GridLayout>
-</com.google.android.material.card.MaterialCardView>
+            android:layout_height="48dp"
+            android:text="+ Add" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
