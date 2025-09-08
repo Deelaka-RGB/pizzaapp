@@ -34,7 +34,6 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="end|top"
-
                 android:layout_margin="6dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/cd_favorite_toggle"
@@ -85,18 +84,23 @@
                 android:textStyle="bold"
                 tools:text="Rs. 250.0" />
 
-            <!-- Small red rounded square with plus -->
-            <TextView
+            <!-- Correct: MaterialButton for Add -->
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnAdd"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:background="@drawable/bg_add_square"
+                android:layout_width="48dp"
+                android:layout_height="55dp"
                 android:contentDescription="@string/cd_add_to_cart"
-                android:gravity="center"
                 android:text="+"
-                android:textColor="@android:color/white"
+                android:textStyle="bold"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                app:cornerRadius="8dp"
+                app:backgroundTint="@color/brandRed"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -1,10 +1,19 @@
 package com.example.pizzaapp;
 
 public class Food {
-    public String imageurl;   // Firestore: "https://..."
-    public String name;       // "BBQ Chicken"
-    public long price;      // 1600  (if you stored a number)
-    public String subtitle;   // optional (category/description)
+    public String name;       // e.g. "BBQ Chicken"
+    public String subtitle;   // e.g. "Pizza"
+    public String desc;       // long description
+    public String imageurl;   // http/https image url
+    public long   price;      // e.g. 1600
 
-    public Food() {}          // required for Firestore
+    public Food() {} // Firestore/JSON needs empty ctor
+
+    public Food(String name, String subtitle, String desc, String imageurl, long price) {
+        this.name = name;
+        this.subtitle = subtitle;
+        this.desc = desc;
+        this.imageurl = imageurl;
+        this.price = price;
+    }
 }

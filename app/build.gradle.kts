@@ -5,8 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.pizzaapp"
-    compileSdk = 34
-
+    compileSdk = 36
     defaultConfig {
         applicationId = "com.example.pizzaapp"
         minSdk = 24
@@ -43,12 +42,28 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("com.google.android.material:material:1.12.0")
 
+        implementation("com.google.android.gms:play-services-location:21.3.0")
+        // Firestore is already in your project; if not:
+        // implementation("com.google.firebase:firebase-firestore:25.1.1")
+
+// app/build.gradle.kts
+    dependencies {
+        implementation(platform("com.google.firebase:firebase-bom:33.2.0")) // or newer
+        implementation("com.google.firebase:firebase-auth")
+        implementation("com.google.firebase:firebase-firestore")
+        // If you directly use Play Services APIs, ensure they’re recent:
+        implementation("com.google.android.gms:play-services-base:18.3.0")
+    }
+
+
 
     // Firebase (ok to keep even if we don’t use it in baseline)
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     dependencies {
         // Import the Firebase BoM
